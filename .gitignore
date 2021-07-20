@@ -19,7 +19,11 @@ dataset.csv
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 .idea/
+venv
 
+.ipynb_checkpoints/
+__pycache__/
+text_processors/__pycache__/
 ## File-based project format:
 *.iws
 
