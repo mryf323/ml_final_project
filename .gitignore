@@ -34,3 +34,5 @@ text_processors/__pycache__/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
+
+w2v.kv
