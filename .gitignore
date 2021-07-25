@@ -36,3 +36,4 @@ text_processors/__pycache__/
 .idea_modules/
 
 w2v.kv
+*.pkl
