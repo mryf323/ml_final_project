@@ -36,7 +36,7 @@ class Word2VecAdapter:
     def fit_transform(self, X):
         if not self.wv:
             self.fit(X)
-        return self.transform(X)
+        return X.swifter.allow_dask_on_strings().apply(lambda x: pd.Series(self.predict(x)))
 
     def transform(self, X):
         return X.swifter.allow_dask_on_strings().apply(lambda x: pd.Series(self.predict(x)))
