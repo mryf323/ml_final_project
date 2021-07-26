@@ -16,7 +16,7 @@ def preprocess_data(dataset, processor_chain=None, debug=False, debug_data_size=
     if debug:
         X, Y = X[:debug_data_size], Y[:debug_data_size]
     if processor_chain:
-        X = X.swifter.allow_dask_on_strings().apply(processor_chain.process)
+        X = X.swifter.apply(processor_chain.process)
     return X, Y
 
 

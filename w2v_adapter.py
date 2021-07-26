@@ -20,7 +20,7 @@ class Word2VecAdapter:
 
     def fit(self, X):
         if not self.wv:
-            X = X.swifter.allow_dask_on_strings().apply(nltk.word_tokenize)
+            X = X.swifter.apply(nltk.word_tokenize)
             model = word2vec.Word2Vec(X, workers=self.workers,
                                       vector_size=self.num_features, min_count=self.min_count,
                                       window=self.window, sample=self.sample)
