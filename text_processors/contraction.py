@@ -1,4 +1,3 @@
-import unicodedata
 from text_processors.text_processor import TextProcessor
 import contractions
 
