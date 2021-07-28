@@ -21,7 +21,7 @@ def preprocess_data(dataset, processor_chain=None, debug=False, debug_data_size=
 
 
 def vectorize_data(X, Y, vectorizer):
-    X_train, X_test, Y_train, Y_test = train_test_split(X, Y)
+    X_train, X_test, Y_train, Y_test = train_test_split(X, Y, random_state=11)
     X_train = vectorizer.fit_transform(X_train)
     X_test = vectorizer.transform(X_test)
     return X_train, X_test, Y_train, Y_test
